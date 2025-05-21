@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "2f120c62-1bde-41c5-8476-1b07befbd254",
+		"name": "exam_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41824263",
+		"_collection_link": "https://auction-3428.postman.co/workspace/auction~5cb9a96e-648b-4145-9495-ea83e102f430/collection/41824263-2f120c62-1bde-41c5-8476-1b07befbd254?action=share&source=collection_link&creator=41824263"
+	},
+	"item": [
+		{
+			"name": "auth-1",
+			"item": [
+				{
+					"name": "registraction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"malika\",\r\n    \"email\":\"numonovamalika1@gmail.com\",\r\n    \"password\":\"Qwwe12445_89hjk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"numonovamalika@gmail.com\",\r\n    \"password\": \"Qwwe12445_89hjk\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "find_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/users/ c75714b6-fb11-4bfb-b4a1-720a4b02d5df",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								" c75714b6-fb11-4bfb-b4a1-720a4b02d5df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"malika\",\r\n    \"email\":\"numonova@gmail.com\",\r\n    \"password\":\"Q2345dfyghuji_90\",\r\n    \"role\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/create/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"create",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_superadmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"username\": \"malikaxon\",\r\n    \"email\": \"numonovam12@gmail.com\",\r\n    \"password\": \"Q2345dfyghuji_90\",\r\n    \"role\": \"SUPERADMIN\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/users/superadmin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"superadmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find_by_email",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"category name\",\r\n    \"description\": \"description ....\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/categories/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"categories",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"category name\",\r\n    \"description\": \"description ....\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/categories/allcategories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"categories",
+								"allcategories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
